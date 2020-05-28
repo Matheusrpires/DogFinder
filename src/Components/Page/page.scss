@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+$background: #f2f4f8;
+$backgroundPc: white;
+$boxshadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 3px 8px rgba(0, 0, 0, 0.1);
+$messageBackground: #16a085;
+$width_container: 80%;
+
+html, body {
+  background: $background;
+}
+
+h1 { 
+  color: #ff4411; 
+  font-size: 30px; 
+  font-family: 'Signika', sans-serif; 
+  padding-bottom: 10px; 
+  margin: 5% 5% 0% 5%;
+}
+
+.container {
+  text-align: center
+}
+
+.dog_selector_container {
+  margin: 0% 10% 5% 10%;
+  display: flex;
+  flex-direction: column;
+  width: $width_container;
+  
+  --buttons: #2980b9;
+  --border: rgba(0, 0, 0, 0.125);
+  --borderDark: rgba(116, 104, 104, 0.25);
+  --borderDarker: rgba(0, 0, 0, 0.5);
+  --borderRadius: 0.125rem;
+  
+  input, select {
+    margin: 2% 0;
+    border: 1px solid var(--border);
+    border-radius: var(--borderRadius);
+    box-sizing: border-box;
+    font-size: 1rem;
+    height: 2.25rem;
+    line-height: 1.25rem;
+    margin-top: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.25s;
+  }
+  
+  input[type=submit] {
+    box-shadow: $boxshadow;
+    background: var(--buttons);
+    color: white;
+    border: none;
+  }
+
+}
+
+.dog_container {
+  position: relative;
+  text-align: center;
+  padding: 0 2%;
+  width: $width_container;
+  margin: auto;
+  .dog_message__sucess {
+    position: absolute;
+    color: white;
+    font-family: "Open Sans",  sans-serif;
+    font-size: 2em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $messageBackground;
+    padding: 0% 2% 2% 2%;
+    box-shadow: $boxshadow;
+    opacity: 0.9;
+    border-radius: 3%;
+  }
+}
+
+img {
+  max-width:100%;
+  max-height:100%;
+  border-radius: 2%;
+}
+
+@media screen and (min-width: 525px) {
+  .container {
+    background: $backgroundPc;
+    width: 440px;
+    margin: 5% auto;
+    padding: 1%;
+    text-align: center
+  }
+}
